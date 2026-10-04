@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Md Ratul Islam — Ratul Labs | Research • Technology • Innovation</title>
+  <meta name="description" content="Ratul Labs is the digital laboratory of Md Ratul Islam, an Information Technology & Management student exploring technology, research, innovation and real-world problem solving.">
+  <meta name="theme-color" content="#050810">
+  <meta property="og:title" content="Ratul Labs — Md Ratul Islam">
+  <meta property="og:description" content="Research • Technology • Innovation. Where ideas become experiments.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    /* Set theme + js flag before first paint to avoid flashes */
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('ratul-labs-theme');
+        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ===== SVG icon sprite ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.79.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.5-3h-3V8.6c0-.87.3-1.6 1.6-1.6h1.5V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.4H8v3h2.5V21h3Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7.5 8 6 8-6"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ambient background layers -->
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Ratul Labs — back to top">
+      <span class="brand-mark mono" aria-hidden="true">&lt;/&gt;</span>
+      <span class="brand-name">Ratul Labs</span>
+    </a>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
+      <a href="#about" data-link="about">About</a>
+      <a href="#projects" data-link="projects">Projects</a>
+      <a href="#research" data-link="research">Research</a>
+      <a href="#skills" data-link="skills">Skills</a>
+      <a href="#journey" data-link="journey">Journey</a>
+      <a href="#contact" data-link="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="icon-btn" data-social="github" aria-label="GitHub" href="#contact">
+        <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="sys-line mono" aria-hidden="true">
+        <span class="live-dot"></span>SYSTEM_STATUS: ONLINE
+        <span class="sep">/</span>RESEARCH_MODE: ACTIVE
+      </p>
+
+      <h1 id="hero-title">
+        <span class="ln">Turning ideas into</span>
+        <span class="ln grad">technology</span>
+        <span class="ln">and technology into</span>
+        <span class="ln grad-2">solutions.</span>
+      </h1>
+
+      <div class="id-block">
+        <p class="id-name">Md Ratul Islam</p>
+        <p class="id-role">Information Technology &amp; Management Student</p>
+        <p class="id-tag mono">Technology • Research • Innovation</p>
+      </div>
+
+      <p class="hero-desc">I'm an Information Technology &amp; Management student exploring technology, research, innovation and real-world problem solving.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">See the experiments <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+      </div>
+
+      <ol class="philosophy mono" aria-label="Core philosophy">
+        <li>Learn</li><li>Explore</li><li>Build</li><li>Experiment</li><li>Improve</li><li>Innovate</li>
+      </ol>
+    </div>
+
+    <div class="hero-visual">
+      <div class="snip-wrap s1" style="--speed:-0.06" aria-hidden="true"><pre class="snip mono"><span class="k">const</span> idea = <span class="v">curiosity</span>;</pre></div>
+      <div class="snip-wrap s2" style="--speed:-0.1" aria-hidden="true"><pre class="snip mono"><span class="k">while</span> (learning) {
+  <span class="f">build</span>();
+  <span class="f">experiment</span>();
+  <span class="f">improve</span>();
+}</pre></div>
+      <div class="snip-wrap s3" style="--speed:-0.04" aria-hidden="true"><pre class="snip mono">technology.<span class="f">solve</span>(<span class="v">realWorldProblem</span>);</pre></div>
+
+      <svg class="hero-svg" viewBox="0 0 480 700" role="img" aria-labelledby="hs-t hs-d">
+        <title id="hs-t">Interactive innovation system</title>
+        <desc id="hs-d">A vertical chain from Idea to Code, Experiment, Test, Solution and Innovation, surrounded by the fields AI, IoT, Data, Systems, Web, Research and Sustainability.</desc>
+        <defs>
+          <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" class="s-blue" stop-opacity=".30"/>
+            <stop offset="1" class="s-blue" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="spineGrad" gradientUnits="userSpaceOnUse" x1="0" y1="60" x2="0" y2="610">
+            <stop offset="0" class="s-blue"/><stop offset=".55" class="s-cyan"/><stop offset="1" class="s-green"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="240" cy="335" r="300" fill="url(#coreGlow)"/>
+        <circle class="ring r1" cx="240" cy="335" r="130"/>
+        <circle class="ring r2" cx="240" cy="335" r="200"/>
+        <circle class="ring r3" cx="240" cy="335" r="268"/>
+
+        <g class="ticks">
+          <path d="M0 335h26M454 335h26M240 0v18M240 682v18"/>
+        </g>
+        <text class="coord" x="10" y="16">X:000 Y:000</text>
+        <text class="coord" x="470" y="16" text-anchor="end">LAT 23.8 / LON 90.4</text>
+        <text class="coord" x="10" y="694">RL-CORE / 2026.10</text>
+
+        <!-- connectors: chip -> node -->
+        <g class="conns">
+          <path class="conn" data-flow data-period="9"  data-delay="1"   data-dur="2.4" d="M102 110 C135 110 135 60 165 60"/>
+          <path class="conn" data-flow data-period="11" data-delay="3.5" data-dur="2.4" d="M375 200 C345 200 345 170 315 170"/>
+          <path class="conn" data-flow data-period="10" data-delay="6"   data-dur="2.4" d="M108 290 C137 290 137 280 165 280"/>
+          <path class="conn" data-flow data-period="12" data-delay="2"   data-dur="2.4" d="M354 400 C335 400 335 390 315 390"/>
+          <path class="conn" data-flow data-period="9"  data-delay="7"   data-dur="2.4" d="M102 470 C135 470 135 500 165 500"/>
+          <path class="conn" data-flow data-period="13" data-delay="4.5" data-dur="2.4" d="M351 550 C333 550 333 500 315 500"/>
+          <path class="conn" data-flow data-period="10" data-delay="0.5" data-dur="2.4" d="M154 655 C160 655 160 610 165 610"/>
+        </g>
+
+        <!-- spine -->
+        <path class="spine" data-flow data-period="7" data-dur="5.5" d="M240 82V588"/>
+        <g class="chevs"><path d="M234 112l6 6 6-6M234 222l6 6 6-6M234 332l6 6 6-6M234 442l6 6 6-6M234 552l6 6 6-6"/></g>
+        <text class="coord core-label" x="262" y="339">◉ CORE</text>
+
+        <!-- nodes -->
+        <g class="hn" transform="translate(240 60)"><rect x="-75" y="-22" width="150" height="44" rx="10"/><circle class="pulse" cx="-60" cy="0" r="3.5" style="animation-delay:0s"/><text class="nt" x="-48" y="5">IDEA</text><text class="ni" x="62" y="3" text-anchor="end">01</text></g>
+        <g class="hn" transform="translate(240 170)"><rect x="-75" y="-22" width="150" height="44" rx="10"/><circle class="pulse" cx="-60" cy="0" r="3.5" style="animation-delay:.5s"/><text class="nt" x="-48" y="5">CODE</text><text class="ni" x="62" y="3" text-anchor="end">02</text></g>
+        <g class="hn" transform="translate(240 280)"><rect x="-75" y="-22" width="150" height="44" rx="10"/><circle class="pulse" cx="-60" cy="0" r="3.5" style="animation-delay:1s"/><text class="nt" x="-48" y="5">EXPERIMENT</text><text class="ni" x="62" y="3" text-anchor="end">03</text></g>
+        <g class="hn" transform="translate(240 390)"><rect x="-75" y="-22" width="150" height="44" rx="10"/><circle class="pulse" cx="-60" cy="0" r="3.5" style="animation-delay:1.5s"/><text class="nt" x="-48" y="5">TEST</text><text class="ni" x="62" y="3" text-anchor="end">04</text></g>
+        <g class="hn" transform="translate(240 500)"><rect x="-75" y="-22" width="150" height="44" rx="10"/><circle class="pulse" cx="-60" cy="0" r="3.5" style="animation-delay:2s"/><text class="nt" x="-48" y="5">SOLUTION</text><text class="ni" x="62" y="3" text-anchor="end">05</text></g>
+        <g class="hn final" transform="translate(240 610)"><rect x="-75" y="-22" width="150" height="44" rx="10"/><circle class="pulse" cx="-60" cy="0" r="3.5" style="animation-delay:2.5s"/><text class="nt" x="-48" y="5">INNOVATION</text><text class="ni" x="62" y="3" text-anchor="end">06</text></g>
+
+        <!-- field chips -->
+        <g class="chip" transform="translate(70 110)"><rect x="-32" y="-14" width="64" height="28" rx="14"/><text y="4" text-anchor="middle">AI</text></g>
+        <g class="chip" transform="translate(410 200)"><rect x="-35" y="-14" width="70" height="28" rx="14"/><text y="4" text-anchor="middle">IoT</text></g>
+        <g class="chip" transform="translate(70 290)"><rect x="-38" y="-14" width="76" height="28" rx="14"/><text y="4" text-anchor="middle">DATA</text></g>
+        <g class="chip" transform="translate(410 400)"><rect x="-56" y="-14" width="112" height="28" rx="14"/><text y="4" text-anchor="middle">SYSTEMS</text></g>
+        <g class="chip" transform="translate(70 470)"><rect x="-32" y="-14" width="64" height="28" rx="14"/><text y="4" text-anchor="middle">WEB</text></g>
+        <g class="chip" transform="translate(410 550)"><rect x="-59" y="-14" width="118" height="28" rx="14"/><text y="4" text-anchor="middle">RESEARCH</text></g>
+        <g class="chip" transform="translate(84 655)"><rect x="-70" y="-14" width="140" height="28" rx="14"/><text y="4" text-anchor="middle">SUSTAINABILITY</text></g>
+
+        <g class="dots" aria-hidden="true"></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <dl class="stats" aria-label="Lab snapshot">
+      <div><dt>Projects</dt><dd><span data-count="2">2</span></dd></div>
+      <div><dt>Champion title</dt><dd><span data-count="1">1</span></dd></div>
+      <div><dt>Milestones</dt><dd><span data-count="2">2</span></dd></div>
+      <div><dt>Research interests</dt><dd><span data-count="11">11</span></dd></div>
+      <div><dt>Technologies in the stack</dt><dd><span data-count="7">7</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about" data-nav="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">01 / ABOUT THE LAB</p>
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 id="about-title" class="h2">Technology is my field of study.<br>Curiosity is my operating system.</h2>
+        <p class="lead">I'm Md Ratul Islam, an Information Technology &amp; Management student at Daffodil International University.</p>
+        <p class="body">I'm drawn to the place where technology meets people: spotting a problem, researching what's behind it, and building something that helps. Ratul Labs is where I keep that work in the open — experiments, ideas, and what each one taught me.</p>
+        <ul class="chips" aria-label="Areas of interest">
+          <li>Technology</li><li>Research</li><li>Innovation</li><li>Digital Solutions</li><li>Entrepreneurship</li><li>Real-world problem solving</li>
+        </ul>
+      </div>
+
+      <aside class="lab-id reveal" aria-label="Lab identity">
+        <div class="lab-id-head">
+          <span class="monogram" aria-hidden="true">RI</span>
+          <div>
+            <p class="lab-id-name">Md Ratul Islam</p>
+            <p class="mono lab-id-sub">Founder, Ratul Labs</p>
+          </div>
+        </div>
+        <dl class="kv mono">
+          <div><dt>FIELD</dt><dd>Information Technology &amp; Management</dd></div>
+          <div><dt>INSTITUTION</dt><dd>Daffodil International University</dd></div>
+          <div><dt>FOCUS</dt><dd>Research • Technology • Innovation</dd></div>
+          <div><dt>LOCATION</dt><dd data-fill="location">BANGLADESH</dd></div>
+          <div><dt>BUILD_VERSION</dt><dd data-fill="buildVersion">2026.10</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="think reveal">
+      <h3 class="h3">How I think</h3>
+      <ol class="chain" id="think-chain">
+        <li style="--i:0"><button class="step" type="button" aria-pressed="true" data-i="0"><span class="dot"></span><span class="step-name">Problem</span></button></li>
+        <li style="--i:1"><button class="step" type="button" aria-pressed="false" data-i="1"><span class="dot"></span><span class="step-name">Understand</span></button></li>
+        <li style="--i:2"><button class="step" type="button" aria-pressed="false" data-i="2"><span class="dot"></span><span class="step-name">Research</span></button></li>
+        <li style="--i:3"><button class="step" type="button" aria-pressed="false" data-i="3"><span class="dot"></span><span class="step-name">Design</span></button></li>
+        <li style="--i:4"><button class="step" type="button" aria-pressed="false" data-i="4"><span class="dot"></span><span class="step-name">Build</span></button></li>
+        <li style="--i:5"><button class="step" type="button" aria-pressed="false" data-i="5"><span class="dot"></span><span class="step-name">Experiment</span></button></li>
+        <li style="--i:6"><button class="step" type="button" aria-pressed="false" data-i="6"><span class="dot"></span><span class="step-name">Improve</span></button></li>
+        <li style="--i:7"><button class="step" type="button" aria-pressed="false" data-i="7"><span class="dot"></span><span class="step-name">Solution</span></button></li>
+      </ol>
+      <p class="think-note" id="think-note" aria-live="polite">Every project starts with something that isn't working well for someone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects" data-nav="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">02 / LAB EXPERIMENTS</p>
+    <h2 id="projects-title" class="h2 reveal">Ideas are only the beginning.</h2>
+
+    <!-- Project 01 -->
+    <article class="proj proj-nb" style="--accent:var(--green)" aria-labelledby="nb-title">
+      <div class="proj-main">
+        <div class="proj-top mono"><span>NB-001</span><span class="status"><i class="live-dot"></i>ACTIVE</span></div>
+        <h3 class="proj-title" id="nb-title">Nobayon</h3>
+        <p class="proj-tag">Smart Refill Ecosystem for a Sustainable Bangladesh</p>
+        <ul class="chips chips-sm" aria-label="Project themes">
+          <li>Sustainability</li><li>IoT</li><li>Smart Refill</li><li>Digital Platform</li><li>Reusable Containers</li><li>QR System</li>
+        </ul>
+        <p class="award"><span class="award-ico" aria-hidden="true">🏆</span><span><strong>Champion</strong><br><span class="mono">StartUp InnovateX 2026</span></span></p>
+
+        <dl class="meta mono" aria-label="Technical metadata">
+          <div><dt>PROJECT_ID:</dt><dd>NB-001</dd></div>
+          <div><dt>STATUS:</dt><dd>ACTIVE</dd></div>
+          <div><dt>DOMAIN:</dt><dd>SUSTAINABILITY</dd></div>
+          <div><dt>SYSTEM:</dt><dd>DIGITAL + IOT</dd></div>
+        </dl>
+
+        <div class="proj-actions">
+          <button class="btn btn-ghost btn-sm explore" type="button" aria-expanded="false" aria-controls="nb-details">Explore project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn-primary btn-sm" data-project="nobayon" hidden target="_blank" rel="noopener">Visit project</a>
+        </div>
+      </div>
+
+      <div class="proj-visual" aria-hidden="false">
+        <svg class="proj-art" viewBox="0 0 300 300" aria-hidden="true">
+          <circle class="pa-ring" cx="150" cy="150" r="60"/><circle class="pa-ring pa-2" cx="150" cy="150" r="100"/><circle class="pa-ring pa-3" cx="150" cy="150" r="140"/>
+          <path class="pa-wave" d="M0 190c25-16 50-16 75 0s50 16 75 0 50-16 75 0 50 16 75 0"/>
+          <path class="pa-wave pa-w2" d="M0 215c25-16 50-16 75 0s50 16 75 0 50-16 75 0 50 16 75 0"/>
+        </svg>
+        <ol class="flow" aria-label="Nobayon refill ecosystem">
+          <li style="--i:0"><span class="mono">01</span>Brand</li>
+          <li style="--i:1"><span class="mono">02</span>Refill Station</li>
+          <li style="--i:2"><span class="mono">03</span>Reusable Bottle</li>
+          <li style="--i:3"><span class="mono">04</span>Customer</li>
+          <li style="--i:4"><span class="mono">05</span>Refill</li>
+          <li style="--i:5"><span class="mono">06</span>Less Plastic</li>
+        </ol>
+      </div>
+
+      <div class="proj-details" id="nb-details">
+        <div class="pd-inner">
+          <p><strong>The idea.</strong> A refill-based ecosystem: brands supply products to refill stations, customers carry reusable bottles identified with a QR system, and every refill replaces a piece of single-use plastic.</p>
+          <p><strong>What makes it a system.</strong> Physical stations, connected IoT hardware and a digital platform work together, so the loop from brand to customer and back can be tracked and improved.</p>
+          <p class="mono pd-link" data-project-note="nobayon">PROJECT_URL: not published yet</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 02 -->
+    <article class="proj proj-pp" style="--accent:var(--violet)" aria-labelledby="pp-title">
+      <div class="proj-main">
+        <div class="proj-top mono"><span>PP-002</span><span class="status"><i class="live-dot"></i>EXPLORING</span></div>
+        <h3 class="proj-title" id="pp-title">PassionPath</h3>
+        <p class="proj-tag">From Self-Discovery to Career Readiness</p>
+        <ul class="chips chips-sm" aria-label="Project themes">
+          <li>Assessment</li><li>Career Discovery</li><li>Mentorship</li><li>Education Technology</li><li>Student Development</li>
+        </ul>
+
+        <dl class="meta mono" aria-label="Technical metadata">
+          <div><dt>PROJECT_ID:</dt><dd>PP-002</dd></div>
+          <div><dt>STATUS:</dt><dd>EXPLORING</dd></div>
+          <div><dt>DOMAIN:</dt><dd>EDUCATION TECHNOLOGY</dd></div>
+          <div><dt>SYSTEM:</dt><dd>DIGITAL PLATFORM</dd></div>
+        </dl>
+
+        <div class="proj-actions">
+          <button class="btn btn-ghost btn-sm explore" type="button" aria-expanded="false" aria-controls="pp-details">Explore project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn-primary btn-sm" data-project="passionpath" hidden target="_blank" rel="noopener">Visit project</a>
+        </div>
+      </div>
+
+      <div class="proj-visual">
+        <svg class="proj-art" viewBox="0 0 300 300" aria-hidden="true">
+          <path class="pa-branch" d="M150 290V190M150 190C150 150 70 150 70 100M150 190C150 140 150 130 150 70M150 190C150 150 230 150 230 100"/>
+          <circle class="pa-node" cx="70" cy="100" r="6"/><circle class="pa-node" cx="150" cy="70" r="6"/><circle class="pa-node" cx="230" cy="100" r="6"/>
+          <circle class="pa-ring pa-3" cx="150" cy="190" r="60"/>
+        </svg>
+        <ol class="flow" aria-label="PassionPath student journey">
+          <li style="--i:0"><span class="mono">01</span>Student</li>
+          <li style="--i:1"><span class="mono">02</span>Self Discovery</li>
+          <li style="--i:2"><span class="mono">03</span>Assessment</li>
+          <li style="--i:3"><span class="mono">04</span>Career Direction</li>
+          <li style="--i:4"><span class="mono">05</span>Skill Development</li>
+          <li style="--i:5"><span class="mono">06</span>Career Readiness</li>
+        </ol>
+      </div>
+
+      <div class="proj-details" id="pp-details">
+        <div class="pd-inner">
+          <p><strong>The idea.</strong> A path for students who aren't sure where they fit: begin with self-discovery, use assessments to find a career direction, then build the skills that make that direction realistic.</p>
+          <p><strong>What makes it a system.</strong> Assessment, career discovery and mentorship connect into a single journey, aimed at student development and career readiness.</p>
+          <p class="mono pd-link" data-project-note="passionpath">PROJECT_URL: not published yet</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== RESEARCH ===== -->
+<section class="section" id="research" data-nav="research" aria-labelledby="research-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">03 / RESEARCH RADAR</p>
+    <h2 id="research-title" class="h2 reveal">Questions worth exploring.</h2>
+
+    <div class="radar-grid">
+      <div class="radar" id="radar">
+        <svg class="radar-svg" viewBox="0 0 600 600" aria-hidden="true">
+          <circle class="rr" cx="300" cy="300" r="90"/><circle class="rr" cx="300" cy="300" r="170"/><circle class="rr" cx="300" cy="300" r="240"/>
+          <path class="rx" d="M300 20V580M20 300H580M102 102 498 498M498 102 102 498"/>
+          <g class="sweep"><path d="M300 300 300 60A240 240 0 0 1 469.7 130.3Z"/><line x1="300" y1="300" x2="300" y2="60"/></g>
+          <g class="rlines">
+            <line class="rline" data-k="ai" x1="300" y1="300" x2="300" y2="60"/>
+            <line class="rline" data-k="iot" x1="300" y1="300" x2="470" y2="130"/>
+            <line class="rline" data-k="data" x1="300" y1="300" x2="540" y2="300"/>
+            <line class="rline" data-k="is" x1="300" y1="300" x2="470" y2="470"/>
+            <line class="rline" data-k="sus" x1="300" y1="300" x2="300" y2="540"/>
+            <line class="rline" data-k="edtech" x1="300" y1="300" x2="130" y2="470"/>
+            <line class="rline" data-k="net" x1="300" y1="300" x2="60" y2="300"/>
+            <line class="rline" data-k="impact" x1="300" y1="300" x2="130" y2="130"/>
+          </g>
+        </svg>
+        <div class="radar-core"><span class="mono">RATUL LABS</span><strong>R&amp;I</strong></div>
+
+        <button class="rnode" type="button" data-k="ai" style="left:50%;top:10%"><span class="full">AI</span><span class="short">AI</span></button>
+        <button class="rnode" type="button" data-k="iot" style="left:78.3%;top:21.7%"><span class="full">IoT</span><span class="short">IoT</span></button>
+        <button class="rnode" type="button" data-k="data" style="left:90%;top:50%"><span class="full">DATA</span><span class="short">DATA</span></button>
+        <button class="rnode" type="button" data-k="is" style="left:78.3%;top:78.3%"><span class="full">INFORMATION SYSTEMS</span><span class="short">INFO SYS</span></button>
+        <button class="rnode" type="button" data-k="sus" style="left:50%;top:90%"><span class="full">SUSTAINABILITY</span><span class="short">SUSTAIN</span></button>
+        <button class="rnode" type="button" data-k="edtech" style="left:21.7%;top:78.3%"><span class="full">EDTECH</span><span class="short">EDTECH</span></button>
+        <button class="rnode" type="button" data-k="net" style="left:10%;top:50%"><span class="full">NETWORKING</span><span class="short">NET</span></button>
+        <button class="rnode" type="button" data-k="impact" style="left:21.7%;top:21.7%"><span class="full">SOCIAL IMPACT</span><span class="short">IMPACT</span></button>
+      </div>
+
+      <div class="radar-panel" aria-live="polite">
+        <p class="mono rp-id" id="rp-id">SELECT_AREA: —</p>
+        <h3 class="rp-title" id="rp-title">Pick an area on the radar.</h3>
+        <p class="rp-text" id="rp-text">Hover, focus or tap a node to see why it matters to me.</p>
+        <p class="mono rp-rel" id="rp-rel"></p>
+      </div>
+    </div>
+
+    <ul class="chips chips-sm interests reveal" aria-label="Research interests">
+      <li>Artificial Intelligence</li><li>Information Systems</li><li>Sustainable Technology</li><li>Data &amp; Decision Making</li><li>Digital Solutions</li><li>Networking &amp; Infrastructure</li><li>Educational Technology</li><li>Technology &amp; Innovation</li><li>Smart Information Systems</li><li>IoT Applications</li><li>Technology &amp; Social Impact</li>
+    </ul>
+
+    <div class="rlog reveal" role="table" aria-label="Research log">
+      <div class="rlog-head mono" role="row">
+        <span role="columnheader"><i class="live-dot"></i>RESEARCH_LOG</span>
+        <span role="columnheader" class="rlog-count">6 ENTRIES</span>
+      </div>
+      <div class="rrow" role="row"><span class="mono rid" role="cell">R-001</span><span class="rname" role="cell">Sustainable Belt Systems</span><span class="pill p-exploring mono" role="cell">EXPLORING</span></div>
+      <div class="rrow" role="row"><span class="mono rid" role="cell">R-002</span><span class="rname" role="cell">Artificial Intelligence</span><span class="pill p-learning mono" role="cell">LEARNING</span></div>
+      <div class="rrow" role="row"><span class="mono rid" role="cell">R-003</span><span class="rname" role="cell">Smart Information Systems</span><span class="pill p-exploring mono" role="cell">EXPLORING</span></div>
+      <div class="rrow" role="row"><span class="mono rid" role="cell">R-004</span><span class="rname" role="cell">Educational Technology</span><span class="pill p-exploring mono" role="cell">EXPLORING</span></div>
+      <div class="rrow" role="row"><span class="mono rid" role="cell">R-005</span><span class="rname" role="cell">IoT Applications</span><span class="pill p-future mono" role="cell">FUTURE</span></div>
+      <div class="rrow" role="row"><span class="mono rid" role="cell">R-006</span><span class="rname" role="cell">Technology &amp; Social Impact</span><span class="pill p-exploring mono" role="cell">EXPLORING</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills" data-nav="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">04 / TECHNOLOGY STACK</p>
+    <h2 id="skills-title" class="h2 reveal">Learning by building.</h2>
+    <p class="body narrow reveal">These show where I am right now, not a score. Each module moves forward as I build more.</p>
+
+    <ul class="legend mono reveal" aria-label="Status legend">
+      <li><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span>LEARNING</li>
+      <li><span class="seg s2" aria-hidden="true"><i></i><i></i><i></i></span>EXPLORING</li>
+      <li><span class="seg s3" aria-hidden="true"><i></i><i></i><i></i></span>USING</li>
+    </ul>
+
+    <ul class="modules">
+      <li class="module s1"><span class="glyph mono" aria-hidden="true">Py</span><div><h3>Python</h3><p class="mono mod-cat">Language</p></div><div class="mod-state"><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ LEARNING ]</span></div></li>
+      <li class="module s1"><span class="glyph mono" aria-hidden="true">Jv</span><div><h3>Java</h3><p class="mono mod-cat">Language</p></div><div class="mod-state"><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ LEARNING ]</span></div></li>
+      <li class="module s1"><span class="glyph mono" aria-hidden="true">&lt;/&gt;</span><div><h3>HTML5</h3><p class="mono mod-cat">Markup</p></div><div class="mod-state"><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ LEARNING ]</span></div></li>
+      <li class="module s1"><span class="glyph mono" aria-hidden="true">{ }</span><div><h3>CSS3</h3><p class="mono mod-cat">Styling</p></div><div class="mod-state"><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ LEARNING ]</span></div></li>
+      <li class="module s1"><span class="glyph mono" aria-hidden="true">DB</span><div><h3>MySQL</h3><p class="mono mod-cat">Database</p></div><div class="mod-state"><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ LEARNING ]</span></div></li>
+      <li class="module s1"><span class="glyph mono" aria-hidden="true">git</span><div><h3>Git</h3><p class="mono mod-cat">Version control</p></div><div class="mod-state"><span class="seg s1" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ LEARNING ]</span></div></li>
+      <li class="module s3"><span class="glyph mono" aria-hidden="true"><svg class="icon"><use href="#i-github"/></svg></span><div><h3>GitHub</h3><p class="mono mod-cat">Collaboration</p></div><div class="mod-state"><span class="seg s3" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono state">[ USING ]</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== BEYOND CODE ===== -->
+<section class="section" id="beyond" data-nav="skills" aria-labelledby="beyond-title">
+  <div class="wrap">
+    <h2 id="beyond-title" class="h2 reveal">Technology is more than writing code.</h2>
+
+    <ol class="beyond">
+      <li>
+        <svg viewBox="0 0 120 80" aria-hidden="true"><g class="il"><circle cx="48" cy="38" r="20"/><path d="m63 53 18 17"/><circle class="fill" cx="36" cy="32" r="2.5"/><circle class="fill" cx="52" cy="26" r="2.5"/><circle class="fill" cx="46" cy="46" r="2.5"/><path d="M36 32l16-6M52 26l-6 20" class="thin"/></g></svg>
+        <span class="mono n">01</span><h3>Understand Problems</h3>
+      </li>
+      <li>
+        <svg viewBox="0 0 120 80" aria-hidden="true"><g class="il"><circle cx="60" cy="40" r="28"/><circle cx="60" cy="40" r="14" class="thin"/><path d="M60 8v14M60 58v14M28 40h14M78 40h14" class="thin"/><circle class="fill" cx="60" cy="40" r="3.5"/></g></svg>
+        <span class="mono n">02</span><h3>Find Opportunities</h3>
+      </li>
+      <li>
+        <svg viewBox="0 0 120 80" aria-hidden="true"><g class="il"><rect x="24" y="16" width="72" height="44" rx="4"/><path d="M24 70h72M24 66v8M96 66v8M104 16v44M100 16h8M100 60h8" class="thin"/><path d="M36 48l14-18 14 12 14-16" /></g></svg>
+        <span class="mono n">03</span><h3>Design Solutions</h3>
+      </li>
+      <li>
+        <svg viewBox="0 0 120 80" aria-hidden="true"><g class="il"><rect x="22" y="48" width="30" height="22" rx="3"/><rect x="56" y="48" width="30" height="22" rx="3"/><rect x="38" y="24" width="30" height="22" rx="3"/><rect x="88" y="26" width="14" height="14" rx="3" class="thin"/></g></svg>
+        <span class="mono n">04</span><h3>Build Useful Things</h3>
+      </li>
+      <li>
+        <svg viewBox="0 0 120 80" aria-hidden="true"><g class="il"><circle cx="60" cy="40" r="8"/><circle cx="60" cy="40" r="20" class="thin"/><circle cx="60" cy="40" r="32" class="thin"/><circle class="fill" cx="60" cy="40" r="3"/></g></svg>
+        <span class="mono n">05</span><h3>Create Meaningful Impact</h3>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== JOURNEY / MILESTONES ===== -->
+<section class="section" id="journey" data-nav="journey" aria-labelledby="journey-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">05 / MILESTONES</p>
+    <h2 id="journey-title" class="h2 reveal">Events logged so far.</h2>
+
+    <ol class="timeline" id="timeline">
+      <li class="event reveal">
+        <span class="ev-node" aria-hidden="true"></span>
+        <div class="ev-card">
+          <p class="mono ev-meta"><span>2025</span><span>SYSTEM EVENT</span></p>
+          <h3>ITM Project Showcase Day</h3>
+          <dl class="mono ev-kv"><div><dt>STATUS:</dt><dd>2ND RUNNER-UP</dd></div></dl>
+        </div>
+      </li>
+      <li class="event reveal">
+        <span class="ev-node ev-win" aria-hidden="true"></span>
+        <div class="ev-card ev-card-win">
+          <p class="mono ev-meta"><span>2026</span><span>SYSTEM EVENT</span></p>
+          <h3>StartUp InnovateX</h3>
+          <dl class="mono ev-kv"><div><dt>STATUS:</dt><dd class="win">CHAMPION</dd></div><div><dt>PROJECT:</dt><dd>NOBAYON</dd></div></dl>
+        </div>
+      </li>
+      <li class="event event-next reveal">
+        <span class="ev-node ev-next" aria-hidden="true"></span>
+        <div class="ev-card ev-card-next">
+          <p class="mono ev-meta"><span>NEXT</span><span>QUEUED</span></p>
+          <h3>Next milestone</h3>
+          <dl class="mono ev-kv"><div><dt>STATUS:</dt><dd>IN PROGRESS</dd></div></dl>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== VISION ===== -->
+<section class="section vision" id="vision" data-nav="journey" aria-labelledby="vision-title">
+  <div class="wrap vision-grid">
+    <div>
+      <p class="sec-label mono reveal">06 / VISION</p>
+      <h2 id="vision-title" class="sr-only">Vision</h2>
+      <div class="vwords" id="vwords">
+        <span class="vword" style="--i:0">LEARN</span>
+        <span class="vword" style="--i:1">BUILD</span>
+        <span class="vword" style="--i:2">EXPERIMENT</span>
+        <span class="vword" style="--i:3">IMPROVE</span>
+        <span class="vword" style="--i:4">INNOVATE</span>
+      </div>
+      <p class="formula mono reveal">Technology <b>+</b> Management <b>+</b> Research <b>+</b> Innovation</p>
+    </div>
+
+    <figure class="codeblock reveal" aria-label="Vision as code">
+      <figcaption class="mono">future.js</figcaption>
+<pre class="mono" aria-hidden="true"><span class="k">const</span> future = {
+  knowledge: <span class="s">"deep"</span>,
+  curiosity: <span class="s">"always_on"</span>,
+  impact: <span class="s">"real_world"</span>,
+  innovation: <span class="v">true</span>
+};</pre>
+      <p class="sr-only">const future equals knowledge deep, curiosity always on, impact real world, innovation true.</p>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== ROADMAP ===== -->
+<section class="section" id="roadmap" data-nav="journey" aria-labelledby="roadmap-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">07 / FUTURE ROADMAP</p>
+    <h2 id="roadmap-title" class="h2 reveal">Where the experiments lead.</h2>
+
+    <div class="road" id="road">
+      <div class="stage">
+        <span class="stage-node mono">NOW</span>
+        <ul><li>Strengthen IT foundations</li><li>Learn programming</li><li>Improve database skills</li><li>Master Git &amp; GitHub</li></ul>
+      </div>
+      <div class="stage">
+        <span class="stage-node mono">NEXT</span>
+        <ul><li>Explore AI</li><li>Build software projects</li><li>Conduct technology research</li><li>Work with data</li></ul>
+      </div>
+      <div class="stage">
+        <span class="stage-node mono">FUTURE</span>
+        <ul><li>Build real-world solutions</li><li>Develop sustainable technology</li><li>Publish research</li><li>Turn ideas into innovation</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contact" data-nav="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="sec-label mono reveal">08 / OPEN CHANNEL</p>
+    <h2 id="contact-title" class="h2 big reveal">Have an idea worth exploring?</h2>
+    <p class="lead reveal">Let's turn curiosity into something useful.</p>
+
+    <ul class="socials reveal">
+      <li><a class="social" data-social="github" href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a></li>
+      <li><a class="social" data-social="linkedin" href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a></li>
+      <li><a class="social" data-social="instagram" href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a></li>
+      <li><a class="social" data-social="facebook" href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg><span>Facebook</span></a></li>
+      <li><a class="social" data-social="email" href="#contact"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>Email</span></a></li>
+    </ul>
+
+    <ol class="chain chain-contact" id="contact-chain" aria-label="How a conversation becomes a solution">
+      <li style="--i:0"><div class="step"><span class="dot"></span><span class="step-name">IDEA</span></div></li>
+      <li style="--i:1"><div class="step"><span class="dot"></span><span class="step-name">DISCUSSION</span></div></li>
+      <li style="--i:2"><div class="step"><span class="dot"></span><span class="step-name">EXPERIMENT</span></div></li>
+      <li style="--i:3"><div class="step"><span class="dot"></span><span class="step-name">SOLUTION</span></div></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="brand-name foot-brand"><span class="mono">&lt;/&gt;</span> Ratul Labs</p>
+      <p class="mono foot-tag">Research • Technology • Innovation</p>
+      <p class="foot-quote">“Where ideas become experiments.”</p>
+    </div>
+    <ul class="foot-links" aria-label="Social links">
+      <li><a data-social="github" href="#contact">GitHub</a></li>
+      <li><a data-social="linkedin" href="#contact">LinkedIn</a></li>
+      <li><a data-social="instagram" href="#contact">Instagram</a></li>
+      <li><a data-social="facebook" href="#contact">Facebook</a></li>
+    </ul>
+  </div>
+  <div class="wrap foot-base mono">
+    <span>© <span id="year">2026</span> Md Ratul Islam</span>
+    <span>BUILD_VERSION: <span data-fill="buildVersion">2026.10</span> / LOCATION: <span data-fill="location">BANGLADESH</span></span>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
